@@ -11,6 +11,7 @@ A simple app router in Cloud Foundry to connect to ABAP System or any destinatio
 	- Destination (destination)
 	- Authorization & Trust Management (xsuaa)
 - Cloud Foundry CLI
+- Configured Cloud Connector & Destination. Please refer to [Set up Secure Tunnel between ABAP System and SAP Cloud Platform (CF)](https://developers.sap.com/tutorials/cp-connectivity-create-secure-tunnel.html)
 
 # Usage
 
