@@ -1,0 +1,12 @@
+---
+applications:
+
+- name: approuter
+  host: approuter-<unique_id>
+  buildpack: nodejs_buildpack
+  memory: 128M
+  path: ./approuter.zip
+  services:
+    - xsuaa
+    - connectivity
+    - destination

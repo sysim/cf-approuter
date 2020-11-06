@@ -1,0 +1,10 @@
+{
+    "authenticationMethod": "none",
+    "routes": [{
+        "source": "/",
+        "target": "/",
+        "destination": "<destination>",
+        "csrfProtection": false,
+        "authenticationType": "none"
+    }]
+}
