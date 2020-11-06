@@ -26,11 +26,11 @@ Create the required service instances in Cloud Foundry.
 
 5. SAP Cloud Platform with try to start the app router after deployment and you should see a green state *Started*.
 
-![](./images/0.jpg)
+![](/images/0.jpg)
 
 6. By clicking the application name, you will get into the application details and the routes URL is provided.
 
-![](./images/1.jpg)
+![](/images/1.jpg)
 
 # Reference
 [Use the Application Router in Cloud Foundry to Connect to ABAP System](https://developers.sap.com/tutorials/cp-connectivity-consume-odata-service-approuter.html)
