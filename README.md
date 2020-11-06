@@ -5,10 +5,8 @@ A simple app router in Cloud Foundry to connect to ABAP System or any destinatio
 
 # Pre-requisites
 
-Create the required service instances in Cloud Foundry.
-
  - SAP Cloud Platform with Cloud Foundry
- - Service Instances
+ - Create the required service instances in Cloud Foundry
 	 - Connectivity (connectivity)
 	 - Destination (destination)
 	 - Authorization & Trust Management (xsuaa)
