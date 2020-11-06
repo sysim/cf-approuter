@@ -41,7 +41,7 @@ A simple app router in Cloud Foundry to connect to ABAP System or any destinatio
         if (-not (Test-Path $file)) { Write-Warning "$file does not exist" }
     }
 
-    Get-ChildItem -Path .\xs-app.json, .\.npmrc, .\package.json | Compress-Archive -DestinationPath approuter.zip
+    Get-ChildItem -Path xs-app.json, .npmrc, package.json | Compress-Archive -DestinationPath approuter.zip
     ```
 
 4. Make sure you have logged into CF CLI and push the approuter to your CF space.

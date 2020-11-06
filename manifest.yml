@@ -2,7 +2,7 @@
 applications:
 
 - name: approuter
-  host: approuter-<unique_id>
+  host: approuter-69952865-d51e-4299-8d94-78f844e6e44e
   buildpack: nodejs_buildpack
   memory: 128M
   path: ./approuter.zip

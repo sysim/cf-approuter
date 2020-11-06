@@ -3,7 +3,7 @@
     "routes": [{
         "source": "/",
         "target": "/",
-        "destination": "<destination>",
+        "destination": "SD1",
         "csrfProtection": false,
         "authenticationType": "none"
     }]
