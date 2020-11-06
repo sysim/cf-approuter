@@ -5,12 +5,12 @@ A simple app router in Cloud Foundry to connect to ABAP System or any destinatio
 
 # Pre-requisites
 
- - SAP Cloud Platform with Cloud Foundry
- - Create the required service instances in Cloud Foundry
-	 - Connectivity (connectivity)
-	 - Destination (destination)
-	 - Authorization & Trust Management (xsuaa)
- - Cloud Foundry CLI
+- SAP Cloud Platform with Cloud Foundry
+- Create the required service instances in Cloud Foundry
+    - Connectivity (connectivity)
+	- Destination (destination)
+	- Authorization & Trust Management (xsuaa)
+- Cloud Foundry CLI
 
 # Usage
 
@@ -18,9 +18,33 @@ A simple app router in Cloud Foundry to connect to ABAP System or any destinatio
 
 2. Replace *<unique_id>* of the *host* in file *manifest.yml* with something unique, for example the subaccount ID.
 
-3. Make sure you have login to CF CLI with your CF credentials.
+3. Create a zip archive called *approuter.zip* containing files *xs-app.json*, *.npmrc* & *package.json*.
 
-4. Build and push the approuter to your CF space.
+    - For Linux or macOS, run the below code in bash.
+
+    ```bash
+    {
+        for file in xs-app.json .npmrc package.json; do
+            if [[ ! -e $file ]]; then
+                echo -e "\e[33m[WARNING] $file does not exist\e[0m"
+            fi
+        done
+
+        zip -r approuter.zip xs-app.json .npmrc package.json
+    }
+    ```
+
+    - For Windows, run the below code in Powershell
+
+    ```powershell
+    foreach ($file in @("xs-app.json",".npmrc", "package.json")){
+        if (-not (Test-Path $file)) { Write-Warning "$file does not exist" }
+    }
+
+    Get-ChildItem -Path .\xs-app.json, .\.npmrc, .\package.json | Compress-Archive -DestinationPath approuter.zip
+    ```
+
+4. Make sure you have logged into CF CLI and push the approuter to your CF space.
 
 ```
 > cf push
