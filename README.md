@@ -22,15 +22,19 @@ Create the required service instances in Cloud Foundry.
 
 3. Make sure you have login to CF CLI with your CF credentials.
 
-4. Execute `cf push`. This will build and push the approuter to your CF space.
+4. Build and push the approuter to your CF space.
+
+```
+> cf push
+```
 
 5. SAP Cloud Platform with try to start the app router after deployment and you should see a green state *Started*.
 
-![](/images/0.jpg)
+![](/images/01.png)
 
 6. By clicking the application name, you will get into the application details and the routes URL is provided.
 
-![](/images/1.jpg)
+![](/images/02.png)
 
 # Reference
 [Use the Application Router in Cloud Foundry to Connect to ABAP System](https://developers.sap.com/tutorials/cp-connectivity-consume-odata-service-approuter.html)
